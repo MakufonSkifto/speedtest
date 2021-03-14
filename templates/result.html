@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>speedtest</title>
+    <style>
+        body {
+            background-color: #242424;
+            color: white;
+            margin-left: 525px;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<br>
+<h1>Results:</h1>
+<body>
+Download Speed: <b>{{ data["download"] }}</b>mbps<br>
+Upload Speed: <b>{{ data["upload"] }}</b>mbps<br>
+Ping: <b>{{ data["ping"] }}</b>ms<br>
+<br>
+IP Adress: <b>{{ data["client"]["ip"] }}</b><br>
+Provider: <b>{{ data["client"]["isp"] }}</b><br>
+Country: <b>{{ data["client"]["country"] }}</b><br>
+</body>
+</html>
